@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <base href="/"> -->
+    <title>Домлер | Агенство нерухомості</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <!-- Template Basic Images End -->
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#000">
+    <!-- Custom Browsers Color End -->
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+</head>
+
+<body>
+    <section class="sk" id="loader">
+      <div class='sk-cube-grid'>
+        <div class='sk-cube sk-cube-1'></div>
+        <div class='sk-cube sk-cube-2'></div>
+        <div class='sk-cube sk-cube-3'></div>
+        <div class='sk-cube sk-cube-4'></div>
+        <div class='sk-cube sk-cube-5'></div>
+        <div class='sk-cube sk-cube-6'></div>
+        <div class='sk-cube sk-cube-7'></div>
+        <div class='sk-cube sk-cube-8'></div>
+        <div class='sk-cube sk-cube-9'></div>
+        </div>
+    </section>
+
+<main id="app">
+    <!-- Custom HTML -->
+    <header class="header">
+        <div class="container">
+        	<div 
+                class="header-burger"
+                @click='showNavMenu = true'
+                >
+        		<svg width='40' height='30'>
+        		    <use fill='#555555' xlink:href="img/icons/menu.svg#Capa_1" />
+                </svg>
+        	</div>
+        	<!-- /.header-burger -->
+            <transition name="bounce">
+                  <div 
+                      class="header-wrapper"
+                      v-show='showNavMenu'
+                      >
+                    <div 
+                          class="header-close"
+                          :class='{rotate: showNavMenu}'
+                          @click='showNavMenu = false'
+                      >
+                        <svg width='30' height='25'>
+                            <use fill='#ccc' xlink:href="/img/icons/left-arrow.svg#Capa_1" />
+                            </svg>
+                    </div>
+                    <!-- /.header-close -->
+                        
+                      <nav class="header-nav">
+                          <ul class="header-nav__list">
+                              <li v-for='link in links' class="header-nav__item">
+                                  <a :href="link.href" class="header-nav__link">{{link.name}}</a>
+                              </li>
+                              <!-- /.header-nav__item -->
+                          </ul>
+                          <!-- /.header-nav__list -->
+                      </nav>
+                      <!-- /.header-nav -->
+                      <div class="header-call">
+                          <div class="header-call__img wow tada" data-wow-delay="0.2s" data-wow-iteration='10' data-wow-duration="1.5s">
+                              <svg width='27' height='27'>
+                                  <use fill='#ffeb3b' xlink:href="/img/icons/phone-receiver.svg#Capa_1" />
+                               </svg>
+                          </div>
+                          <!-- /.header-call__img -->
+                          <div class="header-call__phones">
+                              <div class="header-call__phone first"><a href="tel:+380980955687">+38098 09 55 687</a></div>
+                              <div class="header-call__phone second"><a href="tel:+380630260643">+38063 02 60 643</a></div>
+                          </div>
+                          <!-- /.header-call__phones -->
+                      </div>
+                      <!-- /.header-call -->
+                  </div>
+            </transition>  
+            
+            <!-- /.header-wrapper -->
+            <h1 class="header-title">
+				ПРИДБАЄМО НЕРУХОМІСТЬ У БУДЬ-ЯКІЙ
+				ЧАСТИНІ ЛЬВОВА. 
+			</h1>
+            <!-- /.header-title -->
+        </div>
+        <!-- /.container -->
+    </header>
+    <!-- /.header -->
+    <section class="features">
+        <div class="container">
+        	<div class="features-wrapper">
+        			<div class="features-item first wow zoomIn" data-wow-delay='0.3s'>
+        			    <div class="features-item__subtitle first-subtitle">
+        			        Гарантія якості
+        			    </div>
+        			    <!-- /.features-subtitle -->
+        			    <div class="features-item__title first-title">
+        			        Оренда
+        			        <svg width='20' height='15'>
+        			            <use fill='#555555' xlink:href="/img/icons/left-arrow.svg#Capa_1" /></svg>
+        			    </div>
+        			    <!-- /.features-title -->
+        			    <button class="features-item__button first-button">Замовити</button> 
+        			</div>
+        			<!-- /.features-item -->
+        			<div class="features-item second wow zoomIn" data-wow-delay='0.4s'>
+        			    <div class="features-item__subtitle second-subtitle">
+        			        Велика база
+        			    </div>
+        			    <!-- /.features-subtitle -->
+        			    <div class="features-item__title second-title">
+        			        купівля
+        			        <svg width='20' height='15'>
+        			            <use fill='#fff' xlink:href="/img/icons/left-arrow.svg#Capa_1" /></svg>
+        			    </div>
+        			    <!-- /.features-title -->
+        			    <button class="features-item__button second-button">Замовити</button>
+        			</div>
+        			<!-- /.features-item -->
+        			<div class="features-item third wow zoomIn" data-wow-delay='0.5s'>
+        			    <div class="features-item__subtitle third-subtitle">
+        			        Всебічна допомога і <br>
+        			        супровід
+        			    </div>
+        			    <!-- /.features-subtitle -->
+        			    <div class="features-item__title third-title">
+        			        Продаж
+        			        <svg width='20' height='15'>
+        			            <use fill='#424242' xlink:href="/img/icons/left-arrow.svg#Capa_1" />
+        			         </svg>
+        			    </div>
+        			    <!-- /.features-title -->
+        			    <button class="features-item__button third-button">Замовити</button>
+        			</div>
+        			<!-- /.features-item -->
+        	</div>
+        	<!-- /.features-wrapper -->
+            
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.features -->
+
+    <section class="exclusive">
+    	<div class="container">
+    		
+    		<div class="row align-items-center">
+    			<div class="col-12 col-lg-6 wow slideInLeft">
+    				<div class="section-title">
+    					Ваш ексклюзивний ріелтор
+    				</div>
+    				<!-- /.section-title -->
+    				<div class="exclusive-descr">
+    					<h1 class="exclusive-descr__title">
+    						Вся нерухомість Львова
+    						за 30 хв
+    					</h1>
+    					<!-- /.exclusive-descr__title -->
+    					<div class="exclusive-descr__text">
+    						Ваш ексклюзивний ріелтор це новинка на ринку нерухомості. 
+    						Компанія надає вам ексклюзивного ріелтора, який працює лише з 
+    						вами і забовязується в розумні терміни підшукати вам підходяще 
+    						житло,( або ж його продати чи здати в оренду) При цьому нічого не 
+    						оплачуючи. Таку функцію можна узгодити в двох напрямках. Перший 
+    						можна скласти договір в письмовій формі. Другий можна узгодини 
+    						все в усній формі ( В Людських відносинах). Це гарантія того, що цей 
+    						ріелтор буде заповнений роботою виключно з вами, це значно 
+    						полекшить вам пошуки житла або ж потенційних клієнтів і не потрібно 
+    						буде звонити до десятків різних агенств і чути від них пропозиції, які
+    						 абсолютно не підходять вашим вимогам.
+    					</div>
+    					<!-- /.exclusive-descr__text -->
+    					<button class="exclusive-descr__button">Читати більше</button>
+    				</div>
+    				<!-- /.exclusive-descr -->
+    			</div>
+    			<!-- /.col-12 col-md-6 -->
+    			<div class="col-12 col-lg-6 wow slideInRight">
+    				<div class="exclusive-img">
+    					<img src="img/adult-computer.jpg" class="img-responsive" alt="">
+    				</div>
+    				<!-- /.exclusive-img -->
+    			</div>
+    			<!-- /.col-12 col-md-6 -->
+    		</div>
+    		<!-- /.row -->
+    	</div>
+    	<!-- /.container -->
+    </section>
+    <!-- /.exclusive -->
+
+    <section class="swiper wow fadeIn">
+        <div class="navigation">
+            <div class="pagination"></div>
+            <div class="buttons">
+                <div class="button-prev">
+                    <svg width='20' height='15'>
+                        <use fill='#424242' xlink:href="/img/icons/left-arrow.svg#Capa_1" />
+                    </svg>
+                </div>
+                <!-- /.button-prev -->
+                <div class="button-next">
+                    <svg width='20' height='15'>
+                        <use fill='#424242' xlink:href="/img/icons/left-arrow.svg#Capa_1" />
+                    </svg>
+                </div>
+                <!-- /.button-next -->
+                
+            </div>
+            <!-- /.buttons -->
+        </div>
+        <!-- /.navigation -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+           <div class="swiper-slide" v-for='slide in slides' :style="{'background-image': slide.image}">
+               <div class="swiper-current__info">
+                   <div class="swiper-current__price">{{slide.price}}</div>
+                   <!-- /.swiper-current__price -->
+                   <div class="swiper-current__title">
+                       {{slide.title}}
+                   </div>
+                   <!-- /.swiper-current__title -->
+               </div>
+           </div>
+          </div>          
+        </div>
+    </section>
+    <!-- /.swiper -->
+
+		<section class="reviews">
+			<div class="container">
+				<div class="section-title">відгуки</div>
+				<!-- /.section-title -->
+				<h1 class="reviews-title">Про нас говорять</h1>
+				<!-- /.reviews-title -->
+				<div class="row justify-content-between">
+					<div class="col-12 col-lg-6 wow slideInLeft">
+						<div class="reviews-item">
+							<div class="reviews-item__media">
+								
+								<div class="reviews-item__video">
+									<div class="play">
+										<img src="img/play.png">
+									</div>
+									<img src="img/pexels-photo-736716.jpeg" class="img-responsive photo" alt="">
+								</div>
+								<!-- /.reviews-item__video -->
+								<div class="reviews-item__title">Валентин 45 років, бізнесмен</div>
+								<!-- /.reviews-item__title -->
+							</div>
+							<!-- /.reviews-item__media -->
+							
+							<div class="reviews-item__text">
+								Дуже дякую агенству домлер, за <br>
+								швидку та якісну роботу
+							</div>
+							<!-- /.reviews-item__text -->
+						</div>
+						<!-- /.reviews-item -->
+					</div>
+					<!-- /.col-12 col-md-6 -->
+					<div class="col-12 col-lg-5 wow slideInUp">
+						<div class="reviews-item">
+							<div class="reviews-item__media">
+								
+								<!-- /.reviews-item__title -->
+								<div class="reviews-item__video">
+									<div class="play">
+										<img src="img/play.png">
+									</div>
+									<img src="img/portrait-2865605-960-720.png" class="img-responsive photo" alt="">
+								</div>
+								<div class="reviews-item__title">іра 22 роки, студентка</div>
+							</div>
+							<!-- /.reviews-item__media -->
+							
+							<!-- /.reviews-item__video -->
+							<div class="reviews-item__text">
+								дуже довго не могли знайти <br>
+								житло, а Ігор вирішив всі наші <br>
+								проблеми за один день
+							</div>
+							<!-- /.reviews-item__text -->
+						</div>
+						<!-- /.reviews-item -->
+					</div>
+					<!-- /.col-12 col-md-6 -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.reviews -->
+		<section class="cta">
+			<div class="container">
+				<div class="cta-item wow zoomIn">
+					<div class="cta-item__title">
+						Ми Допоможемо Вам <br>
+						знайти житло вашої мрії
+					</div>
+					<!-- /.cta-item__title -->
+					<div class="cta-item__text">
+						Вам потрібно зняти квартиру у Львові? 
+						Агентство нерухомості «Domler» допоможе 
+						вибрати квартиру у відповідністі з вашими 
+						вимогами і візьме на себе пошук і оформлення 
+						договору оренди. Перегляд квартир з нашим 
+						ріелтором буде у зручний для вас час. Фахівці 
+						агентства допоможуть вам зняти житло у 
+						Львові .
+					</div>
+					<!-- /.cta-item__text -->
+					<button class="cta-item__button">Найняти нас</button>
+				</div>
+				<!-- /.cta-item -->
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.cta -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-12 col-md-4 col-lg-2">
+						<div class="footer-logo">
+							Logo
+						</div>
+						<!-- /.footer-logo -->
+					</div>
+					<!-- /.col-1 -->
+					<div class="col-12 col-md-4 col-lg-2 offset-0 offse-lg-1">
+						<div class="footer-map">
+							<div class="footer-map__title">Карта сайту</div>
+							<!-- /.footer-map__title -->
+                            <ul class="footer-map__list">
+                                <li v-for='link in links' class="footer-map__item">
+                                    <a :href="link.href" class="footer-map__link">{{link.name}}</a>
+                                </li>
+                                <!-- /.footer-map__item -->
+                            </ul>
+                            <!-- /.footer-map__list -->
+						</div>
+						<!-- /.footer-map -->
+					</div>
+					<!-- /.col-2 -->
+					<div class="col-12 col-md-4 col-lg-3">
+						<div class="footer-contacts">
+							<div class="footer-contacts__title">
+								контакти
+							</div>
+							<!-- /.footer-contacts__title -->
+							<div class="footer-contacts__info">
+								<div class="footer-contacts__email">info@domler.com.ua</div>
+								<!-- /.footer-contacts__email -->
+								<div class="footer-contacts__phone">
+								+38098 09 55 687 <br>
+								+38063 026 06 43 (Viber) <br>
+								+38099 763 98 82</div> 
+								<!-- /.footer-contacts__phone -->
+								<div class="footer-contacts__address">
+									Вул. Лазаренка 2 офіс 217 
+									( 3 поверх)
+								</div>
+								<!-- /.footer-contacts__address -->
+							</div>
+							<!-- /.footer-contacts__info -->
+						</div>
+						<!-- /.footer-contacts -->
+					</div>
+					<!-- /.col-2 -->
+					<div class="col-12 col-lg-4">
+						<div class="footer-subscribe">
+							<div class="footer-subscribe__title">Підписатись на оновлення</div>
+							<!-- /.footer-subscribe__title -->
+							<div class="footer-subscribe__subtitle">У нас завжди цікаво!</div>
+							<!-- /.footer-subscribe__subtitle -->
+							<form action="" class="footer-subscribe__form">
+								<input type="email" class="footer-subscribe__form-mail" placeholder="info@domler.com.ua" name="email">
+								<input type="submit" class="footer-subscribe__form-submit" value="Надіслати">
+							</form>
+							<!-- /.footer-subscribe__form -->
+						</div>
+						<!-- /.footer-subscribe -->
+					</div>
+					<!-- /.col-4 -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</footer>
+		<!-- /.footer -->
+		<div class="copyright">
+			<div class="container">
+				developed by letarget
+			</div>
+			<!-- /.container -->
+			
+		</div>
+		<!-- /.copyright -->
+    <div class="stick">
+    	<div 
+            class="stick-title wow zoomInLeft" 
+            @click='showSidebar = true' 
+            data-wow-delay='0.5s'
+            >Найміть нас</div>
+    	<!-- /.stick-title -->
+    	<form 
+            action="#" 
+            class="stick-form" 
+            :class='{slide: showSidebar}'>
+    		<div 
+                class="stick-form__close" 
+                :class='{rotate: showSidebar}' 
+                @click='showSidebar = false'>
+    			<svg width='29' height='20'>
+    			    <use fill='#ccc' xlink:href="/img/icons/left-arrow.svg#Capa_1" />
+    			 </svg>
+    		</div>
+    		<!-- /.close -->
+    			<input type="text" class="stick-form__input text" placeholder="Ім'я" name="Ім'я">
+    			<input type="tel" class="stick-form__input phone" placeholder="Телефон" name="Телефон">
+    			<select name="Що вас цікавить" id="interests" class="stick-form__input select">
+    				<option disabled selected>Що вас цікавить?</option>
+    				<option value="">Оренда</option>
+    				<option value="">Купівля</option>
+    				<option value="">Продаж</option>
+    			</select>
+    			<textarea name="Повідомлення" id="message" placeholder="Повідомлення" class="stick-form__input textarea"></textarea>
+    			<input type="submit" class="stick-form__submit" value="Надіслати">
+    	</form>
+    	<!-- /.stick-form -->
+    </div>
+    <!-- /.stick -->
+</main>
+
+
+    <script src="js/scripts.min.js"></script>
+</body>
+
+</html>
