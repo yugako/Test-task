@@ -1,0 +1,67 @@
+.features
+	background-image: url('/img/apartment-architecture-ceiling-259962.jpg')
+	display: block
+	height: 700px
+	background-size: cover
+	&-wrapper
+		display: flex
+	&-item
+		padding: 31px 0px 31px 51px
+		transition: 0.3s
+		transform: translateY(-25%)
+		max-width: 300px
+		margin-right: 17px
+		width: 100%
+		box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.22)
+		&:hover
+			box-shadow: 0 2px 18px 3px rgba(0, 0, 0, 0.22)
+			transition: 0.3s
+		&__subtitle
+			font-family: $default-font
+			font-size: 14px
+			font-weight: 400
+			text-transform: uppercase
+			margin-bottom: 67px
+		&__title
+			font-family: $default-font
+			font-size: 32px
+			font-weight: 400
+			text-transform: uppercase
+			margin-right: 15px
+			margin-bottom: 31px
+		&__img
+			width: 20px
+			height: 15px
+		&__button
+			background-color: transparent
+			border-color: transparent
+			cursor: pointer
+			font-family: $default-font
+			font-size: 14px
+			font-weight: 400
+			line-height: 24px
+			text-transform: uppercase
+			padding: 10px 25px
+	.first
+		background-color: $accent
+		&-button
+			border: 1px solid $text-primary
+			color: $text-primary
+		&-title,&-subtitle
+			color: $text
+	.second
+		background-color: #9d9d9d
+		&-button
+			color: #ffffff
+			border: 1px solid #fff
+		&-title,&-subtitle
+			color: #ffffff
+	.third
+		background-color: #ffffff
+		&-button
+			border: 1px solid $text-primary
+			color: $text-primary
+		&-title,&-subtitle
+			color: $text
+		&-subtitle
+			margin-bottom: 48px
